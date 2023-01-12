@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "64556a49-93d1-443d-8af0-d03a95c5dab5",
+		"name": "NSW DCS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10872576"
+	},
+	"item": [
+		{
+			"name": "Get All Individuals",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/nsw/dcs/individuals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"nsw",
+						"dcs",
+						"individuals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/nsw/dcs/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"nsw",
+						"dcs",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"GS2277\",\n    \"vinno\": \"K29029293803292928\",\n    \"registrationno\": \"GS2277\",\n    \"personid\": \"H45678109\",\n    \"vehiclemake\": \"AUDI\",\n    \"vehiclemodel\": \"A4\",\n    \"mfgyeardate\": \"2013-12-31T13:00:00.000+00:00\",\n    \"datecreated\": \"2011-11-12T01:20:24.000+00:00\",\n    \"datemodified\": \"2011-11-12T01:20:24.000+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/nsw/dcs/newvehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"nsw",
+						"dcs",
+						"newvehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Vehicle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"GS2288\",\n    \"vinno\": \"K29029293803292777\",\n    \"registrationno\": \"GS2277\",\n    \"personid\": \"G126745\",\n    \"vehiclemake\": \"AUDI\",\n    \"vehiclemodel\": \"A4\",\n    \"mfgyeardate\": \"2013-12-31T13:00:00.000+00:00\",\n    \"datecreated\": \"2011-11-12T01:20:24.000+00:00\",\n    \"datemodified\": \"2011-11-12T01:20:24.000+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/nsw/dcs/updatevehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"nsw",
+						"dcs",
+						"updatevehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Individual",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {          \n            \"id\": \"G126745\",\n            \"firstname\": \"Bill\",\n            \"secondname\": \"Jones\",\n            \"middlename\": \"\",\n            \"dob\": \"1974-12-10T13:00:00.000+00:00\",\n            \"licenseno\": \"187556\",\n            \"isactive\": true,\n            \"datecreated\": \"2001-11-15T01:20:00.000+00:00\",\n            \"datemodified\": \"2001-11-12T01:20:00.000+00:00\",\n            \"vehicles\": \"\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/nsw/dcs/newindividual",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"nsw",
+						"dcs",
+						"newindividual"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

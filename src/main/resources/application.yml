@@ -1,0 +1,15 @@
+
+
+logging:
+  level:
+    root: debug
+
+spring:
+  #  security:
+  #    user:
+  #      name: dev
+  #      password: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/vehicleregistrationdb
+    username: nswdcs
+    password: nswdcs@2023
