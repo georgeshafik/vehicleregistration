@@ -16,8 +16,8 @@ These scripts in turn can be used to generate the respective Curl commands.
 ### Tests 
 - Unit test coverage is not complete and still in progress.
 - Currently: happy path scenarios.
-- Data validation and assumptions to be discussed in demo
-- Key assumption: based on happy path is all fields in payload json scheama are required.
+- Data validation and assumptions to be discussed in presentaion.
+- Key assumption: based on happy path scenarios all fields in REST payload json schema are required.
 
 ### SonarQube 
 Not implemented
