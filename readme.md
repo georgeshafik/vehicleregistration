@@ -20,10 +20,10 @@ These scripts in turn can be used to generate the respective Curl commands.
 - Key assumption: based on happy path is all fields in payload json scheama are required.
 
 ### SonarQube 
-Not implmented
+Not implemented
 
-### Coding- checkstyles
-Not implmented
+### Coding Standards - checkstyles
+Not implemented
 
 ### HTTPS and SSO 
-Not implmented
+Not implemented
