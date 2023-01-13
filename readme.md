@@ -16,8 +16,14 @@ These scripts in turn can be used to generate the respective Curl commands.
 ### Tests 
 - Unit test coverage is not complete and still in progress.
 - Currently: happy path scenarios.
-- Data validation and assumptions to be discussed in presentaion.
+- Data validation and assumptions to be discussed in presentation.
 - Key assumption: based on happy path scenarios all fields in REST payload json schema are required.
+
+### OpenAPI
+https://blog.mestwin.net/openapi-3-documentation-for-your-spring-rest-api-with-springdoc-openapi/
+#### Link
+http://localhost:8080/v3/api-docs
+
 
 ### Logging - Splunk, AWS CloudWatch
 Not implemented

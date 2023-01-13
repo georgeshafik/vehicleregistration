@@ -1,0 +1,587 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": 1.0.0
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/v1/nsw/dcs/updatevehicle": {
+      "put": {
+        "tags": [
+          "Vehicles"
+        ],
+        "description": "update a vehicle",
+        "operationId": "updateVehicle",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vehicle"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Individual"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicAuthError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The service requested is currently unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceNotAvailableError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/nsw/dcs/newindividual": {
+      "put": {
+        "tags": [
+          "Individual"
+        ],
+        "description": "update individual",
+        "operationId": "updateIndividual",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Individual"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Individual"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicAuthError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The service requested is currently unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceNotAvailableError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Individual"
+        ],
+        "description": "add new individual",
+        "operationId": "addNewIndividuals",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Individual"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Individual"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicAuthError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The service requested is currently unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceNotAvailableError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/nsw/dcs/newvehicle": {
+      "post": {
+        "tags": [
+          "Vehicles"
+        ],
+        "description": "add a vehicle",
+        "operationId": "addNewVehicle",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vehicle"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Individual"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicAuthError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The service requested is currently unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceNotAvailableError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/nsw/dcs/vehicles": {
+      "get": {
+        "tags": [
+          "Vehicles"
+        ],
+        "description": "returns all vehicles",
+        "operationId": "getAllVehicles",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Individual"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicAuthError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The service requested is currently unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceNotAvailableError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/nsw/dcs/individuals": {
+      "get": {
+        "tags": [
+          "Individual"
+        ],
+        "description": "returns all individual",
+        "operationId": "getAllIndividuals",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Individual"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicAuthError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The service requested is currently unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceNotAvailableError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Vehicle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "vehicle id",
+            "example": "CG12GH"
+          },
+          "vinno": {
+            "type": "string",
+            "description": "vin number",
+            "example": "V12782348-12830912709147"
+          },
+          "registrationno": {
+            "type": "string",
+            "description": "Registration number",
+            "example": "CG12GH"
+          },
+          "personid": {
+            "type": "string",
+            "description": "Person id",
+            "example": "L22346789"
+          },
+          "vehiclemake": {
+            "type": "string",
+            "description": "Vehicle make",
+            "example": "HYUNDAI"
+          },
+          "vehiclemodel": {
+            "type": "string",
+            "description": "Vehicle model",
+            "example": "TUCSON"
+          },
+          "mfgyeardate": {
+            "type": "string",
+            "description": "Manufacturing Year and Date",
+            "format": "date-time"
+          },
+          "datecreated": {
+            "type": "string",
+            "description": "Record Creation Date",
+            "format": "date-time"
+          },
+          "datemodified": {
+            "type": "string",
+            "description": "Record Modified Date",
+            "format": "date-time"
+          }
+        }
+      },
+      "ServiceNotAvailableError": {
+        "required": [
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Service Not Available Error message"
+          },
+          "error_description": {
+            "type": "string",
+            "description": "Service Not Available Error message"
+          }
+        }
+      },
+      "InternalServerError": {
+        "required": [
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Internal Server Error message"
+          },
+          "error_description": {
+            "type": "string",
+            "description": "Internal Server Error message"
+          }
+        }
+      },
+      "Individual": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "person id",
+            "example": "L22346789"
+          },
+          "firstname": {
+            "type": "string",
+            "description": "first name",
+            "example": "Andy"
+          },
+          "secondname": {
+            "type": "string",
+            "description": "second name",
+            "example": "Newton"
+          },
+          "middlename": {
+            "type": "string",
+            "description": "middle name",
+            "example": "Geoff"
+          },
+          "dob": {
+            "type": "string",
+            "description": "Date of birth",
+            "format": "date-time"
+          },
+          "licenseno": {
+            "type": "string",
+            "description": "License number",
+            "example": "22346789"
+          },
+          "isactive": {
+            "type": "boolean",
+            "description": "Is person account active",
+            "example": true
+          },
+          "datecreated": {
+            "type": "string",
+            "description": "Date record created",
+            "format": "date-time"
+          },
+          "datemodified": {
+            "type": "string",
+            "description": "Date modified",
+            "format": "date-time"
+          }
+        }
+      },
+      "BadRequestError": {
+        "required": [
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Bad Request Error message"
+          },
+          "error_description": {
+            "type": "string",
+            "description": "Bad Request Error message"
+          }
+        }
+      },
+      "BasicAuthError": {
+        "required": [
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Basic Auth Error message"
+          },
+          "error_description": {
+            "type": "string",
+            "description": "Basic Auth Error message"
+          }
+        }
+      }
+    }
+  }
+}

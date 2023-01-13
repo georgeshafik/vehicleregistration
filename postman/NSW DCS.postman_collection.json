@@ -125,7 +125,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {          \n            \"id\": \"BJ130123\",\n            \"firstname\": \"Bill\",\n            \"secondname\": \"Jones\",\n            \"middlename\": \"\",\n            \"dob\": \"1974-12-10T13:00:00.000+00:00\",\n            \"licenseno\": \"187556\",\n            \"isactive\": true,\n            \"datecreated\": \"2023-01-13T10:50:00.000+00:00\",\n            \"datemodified\": \"2023-01-13T10:50:00.000+00:00\",\n            \"vehicles\": null\n }",
+					"raw": " {          \n    \"id\": \"BJ130123\",\n    \"firstname\": \"Bill\",\n    \"secondname\": \"Jones\",\n    \"middlename\": \"\",\n    \"dob\": \"1974-12-10T13:00:00.000+00:00\",\n    \"licenseno\": \"187556\",\n    \"isactive\": true,\n    \"datecreated\": \"2023-01-13T10:50:00.000+00:00\",\n    \"datemodified\": \"2023-01-13T10:50:00.000+00:00\",\n    \"vehicles\": null\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -144,6 +144,37 @@
 						"nsw",
 						"dcs",
 						"newindividual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Vehicle to 2 individuals",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"AH1845\",\n    \"vinno\": \"K129631289641209701927410\",\n    \"registrationno\": \"AH1845\",\n    \"personid\": \"BJ130123\",\n    \"vehiclemake\": \"AUDI\",\n    \"vehiclemodel\": \"A4\",\n    \"mfgyeardate\": \"2013-12-31T13:00:00.000+00:00\",\n    \"datecreated\": \"2011-11-12T01:20:24.000+00:00\",\n    \"datemodified\": \"2011-11-12T01:20:24.000+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/nsw/dcs/updatevehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"nsw",
+						"dcs",
+						"updatevehicle"
 					]
 				}
 			},
