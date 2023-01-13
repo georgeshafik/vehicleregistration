@@ -2,6 +2,8 @@ package au.com.nswdcs.vehicleregistration.model;
 
 import au.com.nswdcs.vehicleregistration.dto.Individual;
 import au.com.nswdcs.vehicleregistration.dto.Vehicle;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.v3.oas.annotations.Hidden;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -63,6 +65,7 @@ public class VehicleModel {
 
     @OneToOne
     @JoinColumn(name = "id")
+    @JsonIgnore
     private IndividualModel person;
 
     /**
