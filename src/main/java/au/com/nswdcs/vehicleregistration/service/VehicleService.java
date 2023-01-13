@@ -95,10 +95,8 @@ public class VehicleService {
             vehicleReturnResponse = VehicleReturnResponse.builder()
                     .status(VehicleRegistrationResponseConstants.SUCCESS.getStatus())
                     .status(VehicleRegistrationResponseConstants.SUCCESS.getCode())
-                    .message( "Vehicle " + vehicle.getId() + " updated. ")
+                    .message("Vehicle " + vehicle.getId() + " updated. ")
                     .build();
-
-
         } else {
             vehicleReturnResponse = VehicleReturnResponse.builder()
                     .status(VehicleRegistrationResponseConstants.SUCCESS.getStatus())
