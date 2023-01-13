@@ -55,6 +55,9 @@ public class IndividualController {
             produces = { "application/json" },
             method = RequestMethod.GET)
     public IndividualReturnResponse getAllIndividuals() {
+
+        log.debug("Get All Individuals called {} ",ServiceMainConstants.GET_ALL_INDIVIDUALS);
+
         return individualService.getAllIndividuals();
     }
 
@@ -84,6 +87,10 @@ public class IndividualController {
             method = RequestMethod.POST)
     public IndividualReturnResponse addNewIndividuals(@Parameter(in = ParameterIn.DEFAULT, description = "",
                 required = true, schema = @Schema()) @Valid @RequestBody Individual individual) {
+
+        log.debug("Add new individual {} {} ",
+                ServiceMainConstants.ADD_NEW_INDIVIDUALS,
+                individual);
 
         IndividualModel individualModel = new IndividualModel();
         individualModel.mapIndividualToIndividualModel(individual);
@@ -117,6 +124,10 @@ public class IndividualController {
             method = RequestMethod.PUT)
     public IndividualReturnResponse updateIndividual(@Parameter(in = ParameterIn.DEFAULT, description = "",
             required = true, schema = @Schema()) @Valid @RequestBody Individual individual) {
+
+        log.debug("Update individual details {} {} ",
+                ServiceMainConstants.ADD_NEW_INDIVIDUALS,
+                individual);
 
         IndividualModel individualModel = new IndividualModel();
         individualModel.mapIndividualToIndividualModel(individual);

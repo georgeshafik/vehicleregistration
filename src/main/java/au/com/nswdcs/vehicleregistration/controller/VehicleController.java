@@ -55,6 +55,10 @@ public class VehicleController {
             produces = { "application/json" },
             method = RequestMethod.GET)
     public VehicleReturnResponse getAllVehicles() {
+
+        log.debug("Get All Vehicles called {} {} ",
+                ServiceMainConstants.GET_ALL_VEHICLES);
+
         return vehicleService.getAllVehicles();
     }
 
@@ -84,6 +88,10 @@ public class VehicleController {
             method = RequestMethod.POST)
     public VehicleReturnResponse addNewVehicle(@Parameter(in = ParameterIn.DEFAULT, description = "",
             required = true, schema = @Schema()) @Valid @RequestBody Vehicle vehicle) {
+
+        log.debug("Add new vehicle {} {} ",
+                ServiceMainConstants.ADD_NEW_VEHICLE,
+                vehicle);
 
         VehicleModel vehicleModel = new VehicleModel();
         vehicleModel.mapVehicleToVehicleModel(vehicle);
@@ -117,6 +125,10 @@ public class VehicleController {
             method = RequestMethod.PUT)
     public VehicleReturnResponse updateVehicle(@Parameter(in = ParameterIn.DEFAULT, description = "",
             required = true, schema = @Schema()) @Valid @RequestBody Vehicle vehicle) {
+
+        log.debug("Update vehicle details {} {} ",
+                ServiceMainConstants.ADD_NEW_VEHICLE,
+                vehicle);
 
         VehicleModel vehicleModel = new VehicleModel();
         vehicleModel.mapVehicleToVehicleModel(vehicle);
