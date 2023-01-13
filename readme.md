@@ -19,6 +19,9 @@ These scripts in turn can be used to generate the respective Curl commands.
 - Data validation and assumptions to be discussed in presentaion.
 - Key assumption: based on happy path scenarios all fields in REST payload json schema are required.
 
+### Exception Handling
+Not implemented
+
 ### SonarQube 
 Not implemented
 
