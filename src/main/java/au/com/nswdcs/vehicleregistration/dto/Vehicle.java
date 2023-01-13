@@ -11,9 +11,6 @@ import org.springframework.validation.annotation.Validated;
 import java.sql.Timestamp;
 import java.util.Date;
 
-import javax.validation.Valid;
-import java.util.Objects;
-
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-01-11T05:02:16.784Z[GMT]")
 

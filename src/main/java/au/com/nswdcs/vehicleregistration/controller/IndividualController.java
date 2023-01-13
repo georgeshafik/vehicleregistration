@@ -3,7 +3,6 @@ package au.com.nswdcs.vehicleregistration.controller;
 import au.com.nswdcs.vehicleregistration.constants.ServiceMainConstants;
 import au.com.nswdcs.vehicleregistration.dto.*;
 import au.com.nswdcs.vehicleregistration.model.IndividualModel;
-import au.com.nswdcs.vehicleregistration.model.VehicleModel;
 import au.com.nswdcs.vehicleregistration.service.IndividualService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -14,10 +13,12 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.util.Date;
 
 /**
  * Created by George Shafik on 11/1/2023

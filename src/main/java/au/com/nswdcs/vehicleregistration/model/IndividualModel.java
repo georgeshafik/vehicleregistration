@@ -7,11 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
-
-import javax.persistence.*;
 
 import static au.com.nswdcs.vehicleregistration.utilities.GeneralUtilities.isAnyNullOrEmpty;
 

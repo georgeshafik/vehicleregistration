@@ -3,13 +3,11 @@ package au.com.nswdcs.vehicleregistration.service;
 import au.com.nswdcs.vehicleregistration.constants.VehicleRegistrationResponseConstants;
 import au.com.nswdcs.vehicleregistration.dto.Individual;
 import au.com.nswdcs.vehicleregistration.dto.IndividualReturnResponse;
-import au.com.nswdcs.vehicleregistration.dto.VehicleReturnResponse;
 import au.com.nswdcs.vehicleregistration.model.IndividualModel;
-import au.com.nswdcs.vehicleregistration.model.VehicleModel;
+import au.com.nswdcs.vehicleregistration.repository.IndividualRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import au.com.nswdcs.vehicleregistration.repository.IndividualRepository;
 
 import java.util.ArrayList;
 import java.util.List;

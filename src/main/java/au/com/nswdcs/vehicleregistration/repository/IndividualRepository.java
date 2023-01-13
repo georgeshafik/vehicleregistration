@@ -5,7 +5,6 @@ import au.com.nswdcs.vehicleregistration.model.IndividualModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Column;
 import java.util.Optional;
 
 /**

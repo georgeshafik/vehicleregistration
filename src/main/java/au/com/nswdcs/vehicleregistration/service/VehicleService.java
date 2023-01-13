@@ -1,10 +1,8 @@
 package au.com.nswdcs.vehicleregistration.service;
 
 import au.com.nswdcs.vehicleregistration.constants.VehicleRegistrationResponseConstants;
-import au.com.nswdcs.vehicleregistration.dto.IndividualReturnResponse;
 import au.com.nswdcs.vehicleregistration.dto.Vehicle;
 import au.com.nswdcs.vehicleregistration.dto.VehicleReturnResponse;
-import au.com.nswdcs.vehicleregistration.model.IndividualModel;
 import au.com.nswdcs.vehicleregistration.model.VehicleModel;
 import au.com.nswdcs.vehicleregistration.repository.VehicleRepository;
 import lombok.extern.slf4j.Slf4j;

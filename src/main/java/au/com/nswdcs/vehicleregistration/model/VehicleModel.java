@@ -1,19 +1,16 @@
 package au.com.nswdcs.vehicleregistration.model;
 
-import au.com.nswdcs.vehicleregistration.dto.Individual;
 import au.com.nswdcs.vehicleregistration.dto.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.swagger.v3.oas.annotations.Hidden;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
-
-import javax.persistence.*;
 
 import static au.com.nswdcs.vehicleregistration.utilities.GeneralUtilities.isAnyNullOrEmpty;
 

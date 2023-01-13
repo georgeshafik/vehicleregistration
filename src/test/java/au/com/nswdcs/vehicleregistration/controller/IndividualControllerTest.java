@@ -4,19 +4,18 @@ import au.com.nswdcs.vehicleregistration.constants.VehicleRegistrationResponseCo
 import au.com.nswdcs.vehicleregistration.dto.Individual;
 import au.com.nswdcs.vehicleregistration.dto.IndividualReturnResponse;
 import au.com.nswdcs.vehicleregistration.model.IndividualModel;
-import au.com.nswdcs.vehicleregistration.repository.IndividualRepository;
 import au.com.nswdcs.vehicleregistration.service.IndividualService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.sql.Timestamp;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static au.com.nswdcs.vehicleregistration.utilities.GeneralUtilities.*;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -30,18 +29,8 @@ public class IndividualControllerTest {
     @Mock
     private IndividualService individualService;
 
-    @Autowired
-    private ObjectMapper objectMapper;
-
-
-    @Autowired
-    private IndividualController individualController;
-
-    @MockBean
-    private IndividualRepository individualRepository;
-
     @Test
-    void getAllIndividuals_ReturnsAllIndividuals_Success() {
+    void getAllIndividuals_ReturnsAllIndividuals_Success() throws ParseException {
 
         when(individualService.getAllIndividuals()).thenReturn(getIndividualReturnResponseWithData());
 
@@ -56,20 +45,23 @@ public class IndividualControllerTest {
     }
 
 
-    private IndividualModel getIndividual() {
+    private IndividualModel getIndividual() throws ParseException {
         IndividualModel individualModel = new IndividualModel();
 
-
-
-       // INSERT INTO `individual` VALUES ('H45678109','Andrew','Newton','','1974-12-11','17893247',true,'2001-11-15 12:20:00','2001-11-12 12:20:00');
         individualModel.setId("H45678109");
         individualModel.setFirstname("Andrew");
-        individualModel.setSecondname("");
+        individualModel.setSecondname("Newton");
+        individualModel.setMiddlename("");
+        individualModel.setDob(convertYYYYMMddToDate("1974-12-11"));
+        individualModel.setLicenseno("17893247");
+        individualModel.setIsactive(true);
+        individualModel.setDatecreated(new Timestamp(convertYYYYMMddhhmmconvertYYYYMMddhhmmssToDatessToDate(getCurrentDateTime()).getTime()));
+        individualModel.setDatemodified(new Timestamp(convertYYYYMMddhhmmconvertYYYYMMddhhmmssToDatessToDate(getCurrentDateTime()).getTime()));
 
         return individualModel;
     }
 
-    private List<IndividualModel> getIndividuals() {
+    private List<IndividualModel> getIndividuals() throws ParseException {
         List<IndividualModel> listIndividualModel = new ArrayList<>();
 
         listIndividualModel.add(getIndividual());
@@ -78,7 +70,7 @@ public class IndividualControllerTest {
 
     }
 
-    private IndividualReturnResponse getIndividualReturnResponseWithData() {
+    private IndividualReturnResponse getIndividualReturnResponseWithData() throws ParseException {
 
         List<IndividualModel> listIndividualModel = getIndividuals();
 

@@ -13,12 +13,19 @@ import java.util.TimeZone;
 public class GeneralUtilities {
 
     public static String getCurrentDateTime() {
-        SimpleDateFormat yyyymddhhmmsssSeparatedSdf = new SimpleDateFormat("yyyyMMdd'T'hh:mm:sss");
+        SimpleDateFormat yyyymddhhmmsssSeparatedSdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:sss");
         return yyyymddhhmmsssSeparatedSdf.format(Calendar.getInstance().getTime());
     }
 
     public static Date convertYYYYMMddToDate(String dateToConvert) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        sdf.setTimeZone(TimeZone.getTimeZone("+10:00"));
+        Date dateConverted = sdf.parse(dateToConvert);
+        return dateConverted;
+    }
+
+    public static Date convertYYYYMMddhhmmconvertYYYYMMddhhmmssToDatessToDate(String dateToConvert) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:sss");
         sdf.setTimeZone(TimeZone.getTimeZone("+10:00"));
         Date dateConverted = sdf.parse(dateToConvert);
         return dateConverted;
